@@ -1,8 +1,7 @@
 from flask import Flask, request, render_template_string
 from openai import OpenAI
 import os
-
-client = OpenAI(api_key="DEIN_API_KEY_HIER")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 app = Flask(__name__)
 
 HTML = """
